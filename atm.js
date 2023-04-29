@@ -18,14 +18,18 @@ var balance = 0;
     function calc1() {
         var spendingMoney = +atmInput.value
 
-      if(balance <  spendingMoney) 
-      return;
+      if(balance <  spendingMoney ){
+       
+      alert("Yazilan mebleg balansa uygun deyil");
+      return balance;
+    }
 
         balance =balance - spendingMoney;
         atmTotal.innerHTML = `${balance} Azn`;
+     
     }
     
-    console.log(calc1())
+    console.log(balance)
 
 atmAddButton.addEventListener('click',calc2 );
 atmCashBackButton.addEventListener('click', calc1)
